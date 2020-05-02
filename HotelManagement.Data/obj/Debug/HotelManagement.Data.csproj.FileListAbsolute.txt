@@ -1,0 +1,11 @@
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Data\bin\Debug\HotelManagement.Data.dll.config
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Data\bin\Debug\HotelManagement.Data.dll
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Data\bin\Debug\HotelManagement.Data.pdb
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Data\bin\Debug\EntityFramework.dll
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Data\bin\Debug\EntityFramework.xml
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Data\obj\Debug\HotelManagement.Data.csprojAssemblyReference.cache
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Data\obj\Debug\HotelManagement.Data.csproj.CopyComplete
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Data\obj\Debug\HotelManagement.Data.dll
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Data\obj\Debug\HotelManagement.Data.pdb

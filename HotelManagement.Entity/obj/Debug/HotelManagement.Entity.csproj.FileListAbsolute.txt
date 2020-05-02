@@ -1,0 +1,5 @@
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Entity\bin\Debug\HotelManagement.Entity.dll
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Entity\bin\Debug\HotelManagement.Entity.pdb
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Entity\obj\Debug\HotelManagement.Entity.csprojAssemblyReference.cache
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Entity\obj\Debug\HotelManagement.Entity.dll
+E:\Gateway\WEB API\Assignment\HotelManagement\HotelManagement.Entity\obj\Debug\HotelManagement.Entity.pdb
