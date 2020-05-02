@@ -20,7 +20,8 @@ namespace HotelManagement.DataAccess
                 cfg.CreateMap<RoomViewModel, Room>();
                 cfg.CreateMap<Room, RoomViewModel>();
                 cfg.CreateMap<BookingViewModel, Booking>();
-                cfg.CreateMap<Booking, BookingViewModel>();
+                cfg.CreateMap<Booking, BookingViewModel>().
+                ForMember(bvm=>bvm.status, map=>map.MapFrom(b=>b.StatusOfBooking.Status));
             });
             mapper = config.CreateMapper();
         }
