@@ -1,4 +1,5 @@
-﻿using HotelManagement.Business.Manager.Interface;
+﻿using HotelManagement.API.AuthHelper;
+using HotelManagement.Business.Manager.Interface;
 using HotelManagement.Entity.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -6,9 +7,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace HotelManagement.API.Controllers
 {
+    [BasicAuthentication]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/booking")]
     public class BookingController : ApiController
     {
@@ -22,6 +26,8 @@ namespace HotelManagement.API.Controllers
         [HttpPost]
         public IHttpActionResult Book(int roomId, DateTime date)
         {
+            if (date < DateTime.Now)
+                return Ok("You Must have to give future date");
             if (manager.ChechAvailablity(roomId, date))
             {
                 if (manager.CreateBooking(roomId, date))
@@ -46,6 +52,8 @@ namespace HotelManagement.API.Controllers
         [HttpGet]
         public IHttpActionResult check(int roomId, DateTime date)
         {
+            if (date < DateTime.Now)
+                return Ok("You Must have to give future date");
             return Ok(manager.ChechAvailablity(roomId, date));
         }
 
@@ -53,13 +61,15 @@ namespace HotelManagement.API.Controllers
         [HttpPut]
         public IHttpActionResult UpdateDate(int bookinId, DateTime newdate)
         {
+            if (newdate < DateTime.Now)
+                return Ok("You Must have to give future date");
             return Ok(manager.UpdateBookingDate(bookinId, newdate));
         }
 
         [Route("updateStatus")]
         [HttpPut]
         public IHttpActionResult UpdateStatus(int bookingId, int statusId)
-        {
+        {            
             return Ok(manager.UpdateBookingStatus(bookingId, statusId));
         }
 

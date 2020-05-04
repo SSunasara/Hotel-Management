@@ -17,6 +17,15 @@ namespace HotelManagement.API
             config.EnableCors();
             config.Filters.Add(new BasicAuthenticationAttribute());
 
+            var matches = config.Formatters
+                            .Where(f => f.SupportedMediaTypes
+                                         .Where(m => m.MediaType.ToString() == "application/xml" ||
+                                                     m.MediaType.ToString() == "text/xml")
+                                         .Count() > 0)
+                            .ToList();
+            foreach (var match in matches)
+                config.Formatters.Remove(match);
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{action}/{id}",

@@ -24,7 +24,7 @@ namespace HotelManagement.DataAccess.Repository
         public bool ChechAvailablity(int id, DateTime date)
         {
             try
-            {
+            {                
                 if (db.Bookings.Any(b => b.RoomId == id && b.BookingDate == date && b.StatusOfBookingId != 4))
                     return false;
                 return true;

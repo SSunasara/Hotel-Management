@@ -1,4 +1,5 @@
-﻿using HotelManagement.Business.Manager.Interface;
+﻿using HotelManagement.API.AuthHelper;
+using HotelManagement.Business.Manager.Interface;
 using HotelManagement.Entity.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Web.Http.Cors;
 
 namespace HotelManagement.API.Controllers
 {
+    [BasicAuthentication]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/room")]
     public class RoomController : ApiController

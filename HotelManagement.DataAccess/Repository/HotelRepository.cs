@@ -26,7 +26,7 @@ namespace HotelManagement.DataAccess.Repository
         {
             try
             {
-                return mapperConfig.mapper.Map<List<HotelViewModel>>(db.Hotels.ToList());
+                return mapperConfig.mapper.Map<List<HotelViewModel>>(db.Hotels.OrderBy(h=>h.HotelName).ToList());
             }
             catch
             {
